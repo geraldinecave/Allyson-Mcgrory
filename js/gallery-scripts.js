@@ -9,7 +9,8 @@ $('#hamburger').click(function(){
 
 
 // GALLERY
-
+var waypoints;
+var lightbox;
 var twoCol;
 
 var width = $(window).width();
@@ -64,9 +65,13 @@ function threeColLayout() {
 	};
 
 
-	var waypoints = $('#image-18').waypoint({
+	waypoints = $('#image-18').waypoint({
 	  handler: function(direction) {
 
+	  	//if (typeof variable !== 'undefined'){
+			lightbox.destroy();
+			lightbox = null;
+		//}
 
 		for( var j = 21; j <= 41; j++) {
 
@@ -83,13 +88,14 @@ function threeColLayout() {
 			} else {
 				$('.gallery-col-3').append(imgBox);
 				this.destroy();
+
 			}
 		};
 
-		var lightbox = $('.gallery-section a').simpleLightbox();
+		lightbox = $('.gallery-section a').simpleLightbox();
 	  }
 	})
-	var lightbox = $('.gallery-section a').simpleLightbox();
+	lightbox = $('.gallery-section a').simpleLightbox();
 }
 
 
