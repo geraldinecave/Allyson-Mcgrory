@@ -1,0 +1,291 @@
+html, body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+	margin: 0px;
+	letter-spacing: 2px;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(255,255,255,.5);
+	text-decoration: none;
+	transition:all 0.3s;
+}
+
+
+/* - HEADER STYLES -*/
+
+header {
+	/*background-color: rgba(0, 0, 0, 0);*/
+	color: #FFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	overflow:hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 );
+}
+
+
+header h1 {
+	float: left;
+	font-weight: 200;
+	letter-spacing: 5px;
+	font-size: 1.5rem;
+	padding-top: 5px;
+}
+
+
+
+header h1 span{
+	font-weight: 500;
+	letter-spacing: 5px;
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+header nav {
+	float: right;
+}
+
+header ul {
+	padding-left: 0;
+}
+
+header li {
+	display: inline-block;
+	text-align: right;
+	padding-top: 8px;
+	padding-left: 15px;
+	font-weight: 200;
+	letter-spacing: 3px;
+}
+
+#hamburger {
+	display: none;
+	cursor: pointer;
+	transition:all 0.3s;
+	font-size: 5rem;
+}
+
+#hamburger.open {
+Transform: rotate(180deg);
+}
+
+@media (max-width: 767px){
+
+	header li {
+	display: block;
+	text-align: left;
+}
+
+	header h1 {
+		float: none;
+		font-weight: 200;
+}
+
+	header nav {
+		float: none;
+		overflow: hidden;
+		height: 0;
+}
+
+	header nav.open {
+		height: auto;
+}
+
+	#hamburger {
+		display: block;
+		font-size: 2rem;
+		float: right;
+		padding: none;
+	}
+
+}
+
+
+/* --- CAROUSEL STYLES ---*/
+
+.carousel-item {
+	  height: 100vh;
+	  min-height: 300px;
+	  background: no-repeat center center scroll;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+.carousel-item p {
+	font-size: 12px;
+}
+
+
+.gallery-link {
+	position: absolute;
+	bottom: 0px;
+	right: 30px;
+	font-weight: 200;
+}
+
+.gallery-link a {
+	font-weight: 200;
+}
+
+
+.gallery-link{
+	font-size: 1.2rem;
+	background: rgba(0, 0, 0, 0.8);
+	letter-spacing: 3px;
+	padding: 10px 30px;
+	border: none;
+	color: white;
+}
+
+#carouselExampleIndicators li {
+	display: none;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../images/prev-arrow.svg");
+}
+
+.carousel-control-next-icon {
+    background-image: url("../images/next-arrow.svg");
+}
+
+
+
+ /*- FOOTER STYLES -*/
+
+footer {
+	background: black;
+	color: grey;
+	font-size: .5rem;
+	text-align: center;
+	padding: 2px;
+}
+
+footer ul {
+	padding: 0;
+}
+
+footer li {
+	display: inline-block;
+	padding: 10px 10px 0 10px;
+}
+
+
+
+
+
+/* - CONTACT STYLES -*/
+
+#contact-container {
+	background: url(../images/contact-bg.jpg) no-repeat center center;
+	padding: 100px 50px;
+	text-align: center;
+	height: 100vh;
+}
+
+#contact-container h2{
+	color: #FFF;;
+	letter-spacing: 2px;
+	font-weight: 200;
+}
+
+#contact-container p {
+	color: #FFF;
+	font-style: italic;
+	/*padding-top: 10px;*/
+	font-weight: 200;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 2px
+	border: none;
+	font-size: 1.2rem;
+	font-weight: 200;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 100%;
+    }
+}
+/*
+input[type=text] {
+	border: none;
+	font-size: 1.2rem;
+	font-weight: 200;
+	text-align: center;
+	letter-spacing: 2px;
+}*/
+
+input[type=submit] {
+	background: rgba(0,0,0,1);
+	border: solid 1px #202020;
+	font-weight: 200;
+	font-size: 1.5rem;
+	letter-spacing: 3px;
+	color: #FFF;
+}
+
+.form-box {
+	background: rgba(0,0,0,.7);
+	width: 500px;
+	padding: 30px;
+}
+
+.contact-details {
+	background: rgba(255,255,255,.95);
+	padding: 30px;
+	text-align: left;
+}
+
+.contact-details h5 {
+	font-weight: 200;
+}
+
+
+#contact-details-2 p {
+	color: black;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	font-size: 1.2rem;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
